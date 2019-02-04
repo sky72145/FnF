@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="QaaReply">
+	<resultMap type="qaaReplyVo" id="qaaReplyMap">
+		<result column="idx" property="idx" />
+		<result column="parent" property="parent" />
+		<result column="text" property="text" />
+		<result column="regdate" property="regdate" />
+		<result column="updatedate" property="updatedate" />
+	</resultMap>
+
+	<parameterMap type="qaaReplyVo" id="replyInsertMap">
+		<parameter property="parent" javaType="Integer" jdbcType="INTEGER" mode="IN" />
+		<parameter property="text" javaType="String" jdbcType="VARCHAR" mode="IN" />
+	</parameterMap>
+	<insert id="insert" parameterMap="replyInsertMap">
+		{ call sp_qaa_reply_insert(?, ?)}
+	</insert>
+	
+	<parameterMap type="hashMap" id="replySelectMap">
+		<parameter property="parent" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+		<parameter property="results" javaType="ResultSet" jdbcType="CURSOR" 
+		mode="OUT" resultMap="qaaReplyMap"/>
+	</parameterMap>
+	<select id="select" parameterMap="replySelectMap" statementType="CALLABLE">
+		{  call sp_qaa_reply_select(?, ?)}
+	</select>
+	
+	<delete id="delete" parameterType="Integer">
+		{ call sp_qaa_reply_delete(#{idx})}
+	</delete>
+	
+	<parameterMap type="hashMap" id="replyUpdateMap">
+		<parameter property="idx" />
+		<parameter property="text"/>
+	</parameterMap>
+	<update id="update" parameterMap="replyUpdateMap">
+		{ call sp_qaa_reply_update(?, ?)}
+	</update>
+	
+</mapper>

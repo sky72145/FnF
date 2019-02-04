@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Order">
+	<resultMap type="orderVo" id="orderMap">
+		<result column="IDX" property="idx" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="PCODE" property="pcode" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="USER_ID" property="user_id" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="CART_IDX" property="cart_idx" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="DEL_IDX" property="del_idx" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="RECEIVER_NAME" property="receiver_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="PAY" property="pay" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="PAY_DATE" property="pay_date" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="ZIPCODE" property="zipcode" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="ADDRESS1" property="address1" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="ADDRESS2" property="address2" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="MILE_GIVE" property="mile_give" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="MILE_USED" property="mile_used" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="DEL_MESSAGE" property="del_message" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="DEL_PRICE" property="del_price" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="DEL_CODE" property="del_code" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="STATUS" property="status" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="USER_NAME" property="user_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="EMAIL" property="email" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="PHONE" property="phone" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="MILE_REMAIN" property="mile_remain" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+	</resultMap>
+	
+	
+	<!--보유 마일리지 계산  -->
+	<select id="mile_remain" parameterType="String" resultType="Integer" >
+			 SELECT MILE_REMAIN
+   			 FROM MILEAGE
+    		WHERE USER_ID = #{user_id}
+	</select>
+	<!-- 주문 -->
+	<insert id="insertOrder">
+			INSERT INTO ORDERS(idx,user_id,receiver_name,pay,pay_date,zipcode,address1,address2,mile_used,mile_give,del_message,del_price,totalprice,phone,email,status)
+			VALUES(#{idx},#{user_id},#{receiver_name},#{pay},#{pay_date},#{zipcode},#{address1},#{address2},#{mile_used},#{mile_give},#{del_message},#{del_price},#{totalprice},#{phone},#{email},#{status})
+	
+	</insert>
+	
+	<insert id="addMile">
+			UPDATE MILEAGE
+			SET 
+			mile_total = mile_total + #{mile_give},
+			mile_remain = mile_total + #{mile_give}
+			WHERE USER_ID = #{user_id}
+	</insert>
+	
+	<insert id="minusMile">
+			UPDATE MILEAGE
+			SET 
+			MILE_USED = MILE_USED + #{mile_used},
+			mile_remain = mile_remain - #{mile_used}
+			WHERE USER_ID = #{user_id}
+	</insert>
+	
+	<insert id="insertDetial">
+			INSERT INTO ORDER_DETIAL(IDX,USER_ID,PCODE,PRODUCT_COUNT,PRICE)
+			SELECT a.idx,a.user_id, b.pcode,b.product_count,c.price
+			FROM orders a, cart b, product c
+     		 WHERE a.idx = #{idx} AND b.user_id = a.user_id AND c.pcode = b.pcode
+	</insert>
+	
+	<select id="result" resultType="orderVo">
+			SELECT IDX, RECEIVER_NAME, PAY, PAY_DATE, ZIPCODE, ADDRESS1, ADDRESS2, MILE_GIVE, MILE_USED, DEL_MESSAGE, DEL_PRICE, TOTALPRICE, PHONE, EMAIL 
+			FROM ORDERS 
+			WHERE 1=1
+			AND idx = #{order_id}
+	</select>
+	
+	<select id="userinfo" resultType="orderVo">
+			SELECT phone, email, user_name
+			FROM CUSTOMER
+			WHERE USER_ID = #{user_id}
+	</select>
+	
+	<update id="product_update">
+			UPDATE
+			PRODUCT a
+			SET a.SELL_NUM = a.sell_num + (SELECT b.PRODUCT_COUNT FROM ORDER_DETIAL b WHERE b.IDX=#{idx} AND b.PCODE = #{pcode}),
+			a.STOCK = a.STOCK - (SELECT b.PRODUCT_COUNT FROM ORDER_DETIAL b WHERE b.IDX=#{idx} AND b.PCODE = #{pcode})
+			WHERE a.pcode=#{pcode}
+	</update>
+	
+	<!-- pcode 값가져오기 -->
+	<parameterMap type="orderVo" id="pcodegetMap">
+		<parameter property="user_id" mode="IN" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<parameter property="result" mode="OUT" 
+			javaType="java.sql.ResultSet" jdbcType="CURSOR" resultMap="orderMap"/>
+	</parameterMap>
+	<select id="pcode" statementType="CALLABLE" parameterMap="pcodegetMap" parameterType="hashMap">
+		{  call sp_order_pcodeGet(?,?)}
+	</select> 
+	<!-- End  -->
+	
+	<!-- user addresss -->
+	<parameterMap type="orderVo" id="useraddrMap">
+		<parameter property="user_id" mode="IN" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<parameter property="result" mode="OUT" 
+			javaType="java.sql.ResultSet" jdbcType="CURSOR" resultMap="orderMap"/>
+	</parameterMap>
+	<select id="useraddress" statementType="CALLABLE" parameterMap="useraddrMap" parameterType="hashMap">
+		{  call sp_order_useraddr(?,?)}
+	</select> 
+	<!-- End  -->
+
+	
+</mapper>

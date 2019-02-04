@@ -1,0 +1,2337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <package id="1" language="java" name="store.fnfm.comm" project="FNF_M" file="/FNF_M/src/main/java/store/fnfm/comm" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="329" width="416" x="32" y="26"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="2" language="java" name="store.fnfm.comm.JSONUtil" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/comm/JSONUtil.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="235" y="215"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="3" language="java" name="store.fnfm.controller" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1389" width="2569" x="542" y="59"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="4" language="java" name="store.fnfm.controller.FindController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/FindController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="689" y="183"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="store.fnfm.controller.MyMessageController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/MyMessageController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1101" y="202"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="store.fnfm.controller.ProductsController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/ProductsController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1200" y="484"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="store.fnfm.controller.SellerController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/SellerController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="977" y="488"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="store.fnfm.controller.CustomerController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/CustomerController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="684" y="487"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="store.fnfm.controller.BoardController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/BoardController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1395" y="204"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="store.fnfm.controller.MembersController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/MembersController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1658" y="238"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="store.fnfm.controller.OrderSellerController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/OrderSellerController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1456" y="492"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="store.fnfm.controller.AdminPathController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/AdminPathController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1697" y="478"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="store.fnfm.controller.QaaController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/QaaController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1650" y="834"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="store.fnfm.controller.NoticeController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/NoticeController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="674" y="832"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="store.fnfm.controller.QaaReplyController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/QaaReplyController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="914" y="823"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="store.fnfm.controller.CartController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/CartController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1208" y="850"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="store.fnfm.controller.SellerProductController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/SellerProductController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="842" y="1208"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="store.fnfm.controller.OrderController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/OrderController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1363" y="1203"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="store.fnfm.controller.SellerMailController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/SellerMailController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1774" y="1194"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="store.fnfm.controller.InquiryController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/InquiryController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2043" y="191"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="store.fnfm.controller.MailController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/MailController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2308" y="227"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="store.fnfm.controller.AdminNoticeController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/AdminNoticeController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2625" y="236"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="store.fnfm.controller.AdminQaaController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/AdminQaaController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2031" y="526"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="store.fnfm.controller.LoginController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/LoginController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2291" y="458"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="store.fnfm.controller.AdminCustomerController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/AdminCustomerController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2477" y="546"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="store.fnfm.controller.PathController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/PathController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2668" y="503"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="store.fnfm.controller.MessageController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/MessageController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2921" y="589"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="store.fnfm.controller.SellerChartController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/SellerChartController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2169" y="918"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="store.fnfm.controller.CommonController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/CommonController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2468" y="981"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="store.fnfm.controller.HomeController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/HomeController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2790" y="954"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="store.fnfm.controller.AdminFaqController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/AdminFaqController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2800" y="1248"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="store.fnfm.controller.FaqController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/FaqController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2161" y="1150"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="store.fnfm.controller.ProductAdminController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/controller/ProductAdminController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2466" y="1257"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="34" language="java" name="store.fnfm.dao" project="FNF_M" file="/FNF_M/src/main/java/store/fnfm/dao" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1511" width="2172" x="3163" y="73"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <interface id="35" language="java" name="store.fnfm.dao.OrderSellerDAO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/OrderSellerDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4758" y="660"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="36" language="java" name="store.fnfm.dao.QaaReplyDaoImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/QaaReplyDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3268" y="224"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="37" language="java" name="store.fnfm.dao.SellerDaoImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/SellerDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3473" y="269"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="store.fnfm.dao.MessageDAOImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/MessageDAOImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3705" y="323"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="store.fnfm.dao.CustomerDAOImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/CustomerDAOImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3940" y="278"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="40" language="java" name="store.fnfm.dao.BoardDao" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/BoardDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4548" y="642"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="41" language="java" name="store.fnfm.dao.CartDaoImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/CartDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4155" y="260"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="42" language="java" name="store.fnfm.dao.SellerChartDAOImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/SellerChartDAOImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4350" y="233"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="43" language="java" name="store.fnfm.dao.MessageDAO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/MessageDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3705" y="714"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="44" language="java" name="store.fnfm.dao.BoardDaoImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/BoardDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4548" y="251"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="45" language="java" name="store.fnfm.dao.UserDao" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/UserDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4967" y="633"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="46" language="java" name="store.fnfm.dao.OrderSellerDAOImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/OrderSellerDAOImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4758" y="269"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="47" language="java" name="store.fnfm.dao.QaaReplyDao" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/QaaReplyDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3268" y="615"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="48" language="java" name="store.fnfm.dao.UserDaoImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/UserDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4967" y="242"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="49" language="java" name="store.fnfm.dao.CustomerDAO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/CustomerDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3940" y="669"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="50" language="java" name="store.fnfm.dao.SearchAllDAOImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/SearchAllDAOImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5192" y="206"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="51" language="java" name="store.fnfm.dao.MainProductDAOImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/MainProductDAOImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4923" y="1015"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="52" language="java" name="store.fnfm.dao.QaaDAOImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/QaaDAOImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3263" y="1055"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="53" language="java" name="store.fnfm.dao.MainProductDAO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/MainProductDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4923" y="1406"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="54" language="java" name="store.fnfm.dao.ProductAdminDao" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/ProductAdminDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4222" y="1455"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="55" language="java" name="store.fnfm.dao.QaaDAO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/QaaDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3263" y="1446"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="56" language="java" name="store.fnfm.dao.SellerDao" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/SellerDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3473" y="660"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="57" language="java" name="store.fnfm.dao.InquiryDAOImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/InquiryDAOImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3451" y="1010"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="58" language="java" name="store.fnfm.dao.MemberDAOImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/MemberDAOImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3629" y="965"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="59" language="java" name="store.fnfm.dao.OrderDaoImple" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/OrderDaoImple.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3818" y="1064"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="60" language="java" name="store.fnfm.dao.SellerProductDAO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/SellerProductDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4670" y="1461"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="61" language="java" name="store.fnfm.dao.NoticeDaoImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/NoticeDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4018" y="1055"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="62" language="java" name="store.fnfm.dao.SellerChartDAO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/SellerChartDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4350" y="624"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="63" language="java" name="store.fnfm.dao.CartDao" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/CartDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4155" y="651"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="64" language="java" name="store.fnfm.dao.MemberDAO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/MemberDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3620" y="1365"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="65" language="java" name="store.fnfm.dao.NoticeDAO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/NoticeDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4018" y="1446"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="66" language="java" name="store.fnfm.dao.OrderDao" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/OrderDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3818" y="1455"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="67" language="java" name="store.fnfm.dao.ProductAdminDaoImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/ProductAdminDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4222" y="1064"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="68" language="java" name="store.fnfm.dao.FaqDaoImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/FaqDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4427" y="1055"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="69" language="java" name="store.fnfm.dao.InquiryDAO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/InquiryDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3451" y="1401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="70" language="java" name="store.fnfm.dao.FaqDAO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/FaqDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4427" y="1446"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="71" language="java" name="store.fnfm.dao.SearchAllDAO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/SearchAllDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5192" y="597"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="72" language="java" name="store.fnfm.dao.SellerProductDAOImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/dao/SellerProductDAOImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4670" y="1070"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="73" language="java" name="store.fnfm.mapper" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/mapper" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="984" width="498" x="23" y="415"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <interface id="74" language="java" name="store.fnfm.mapper.ProductsMapper" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/mapper/ProductsMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="162" y="668"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="75" language="java" name="store.fnfm.mapper.MembersMapper" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/mapper/MembersMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="283" y="1255"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="76" language="java" name="store.fnfm.mapper.OrderMapper" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/mapper/OrderMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="407" y="544"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="77" language="java" name="store.fnfm.mapper.MyMessageMapper" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/mapper/MyMessageMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="295" y="1013"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="78" language="java" name="store.fnfm.mapper.LoginMapper" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/mapper/LoginMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="402" y="720"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <package id="79" language="java" name="store.fnfm.oauth" project="FNF_M" file="/FNF_M/src/main/java/store/fnfm/oauth" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="683" width="1146" x="32" y="1470"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="80" language="java" name="store.fnfm.oauth.NaverController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/oauth/NaverController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="308" y="1671"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="81" language="java" name="store.fnfm.oauth.NaverLoginBO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/oauth/NaverLoginBO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="226" y="1936"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="82" language="java" name="store.fnfm.oauth.NaverLoginApi" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/oauth/NaverLoginApi.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1057" y="1864"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="83" language="java" name="store.fnfm.oauth.KakaoController" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/oauth/KakaoController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="762" y="1662"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="84" language="java" name="store.fnfm.oauth.NaverLoginApi.InstanceHolder" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/oauth/NaverLoginApi.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1019" y="1626"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="85" language="java" name="store.fnfm.security" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/security" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="603" width="1160" x="1231" y="1511"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="86" language="java" name="store.fnfm.security.CustomAccessDeniedHandler" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/security/CustomAccessDeniedHandler.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1461" y="1652"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="87" language="java" name="store.fnfm.security.CustomLoginSuccessHandler" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/security/CustomLoginSuccessHandler.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1930" y="1652"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="88" language="java" name="store.fnfm.security.LoginUser" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/security/LoginUser.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1476" y="1904"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="89" language="java" name="store.fnfm.security.CutomerUserDetailService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/security/CutomerUserDetailService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1922" y="1893"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="90" language="java" name="store.fnfm.service" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="2020" width="2705" x="2433" y="1647"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <interface id="91" language="java" name="store.fnfm.service.CustomerService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/CustomerService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4433" y="3060"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="92" language="java" name="store.fnfm.service.OrderSellerService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/OrderSellerService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3347" y="3018"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="93" language="java" name="store.fnfm.service.OrdersServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/OrdersServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2842" y="1810"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="94" language="java" name="store.fnfm.service.InquiryServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/InquiryServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3058" y="1828"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="95" language="java" name="store.fnfm.service.FaqService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/FaqService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3923" y="2255"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="96" language="java" name="store.fnfm.service.ProductAdminService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/ProductAdminService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2570" y="2903"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="97" language="java" name="store.fnfm.service.QaaReplyServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/QaaReplyServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3274" y="1828"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="98" language="java" name="store.fnfm.service.OrderServiceImple" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/OrderServiceImple.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3501" y="1882"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="99" language="java" name="store.fnfm.service.QaaService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/QaaService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4364" y="2255"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="100" language="java" name="store.fnfm.service.SellerServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/SellerServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3718" y="1873"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="101" language="java" name="store.fnfm.service.InquiryService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/InquiryService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3058" y="2210"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="102" language="java" name="store.fnfm.service.CartService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/CartService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3552" y="3009"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="103" language="java" name="store.fnfm.service.FaqServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/FaqServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3923" y="1873"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="104" language="java" name="store.fnfm.service.MessageServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/MessageServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4143" y="1927"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="105" language="java" name="store.fnfm.service.MemberService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/MemberService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3951" y="2937"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="106" language="java" name="store.fnfm.service.QaaServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/QaaServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4364" y="1873"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="107" language="java" name="store.fnfm.service.SellerProductServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/SellerProductServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4608" y="1918"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="108" language="java" name="store.fnfm.service.MainProductService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/MainProductService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4420" y="3417"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="109" language="java" name="store.fnfm.service.MyMessageServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/MyMessageServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4904" y="1855"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="110" language="java" name="store.fnfm.service.SellerService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/SellerService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3718" y="2255"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="111" language="java" name="store.fnfm.service.OrdersService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/OrdersService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2842" y="2192"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="112" language="java" name="store.fnfm.service.ProductsService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/ProductsService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4749" y="3078"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="113" language="java" name="store.fnfm.service.MembersService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/MembersService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3107" y="2858"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="114" language="java" name="store.fnfm.service.ProductAdminServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/ProductAdminServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2570" y="2521"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="115" language="java" name="store.fnfm.service.FindServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/FindServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2843" y="2485"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="116" language="java" name="store.fnfm.service.MembersServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/MembersServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3107" y="2476"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="117" language="java" name="store.fnfm.service.OrderSellerServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/OrderSellerServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3347" y="2636"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="118" language="java" name="store.fnfm.service.SearchAllService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/SearchAllService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5007" y="3416"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="119" language="java" name="store.fnfm.service.MyMessageService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/MyMessageService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4904" y="2237"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="120" language="java" name="store.fnfm.service.CartServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/CartServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3552" y="2627"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="121" language="java" name="store.fnfm.service.UserServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/UserServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3765" y="2609"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="122" language="java" name="store.fnfm.service.MemberServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/MemberServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3963" y="2555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="123" language="java" name="store.fnfm.service.UserService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/UserService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3765" y="2991"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="124" language="java" name="store.fnfm.service.BoardServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/BoardServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4160" y="2618"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="125" language="java" name="store.fnfm.service.CustomerServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/CustomerServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4464" y="2687"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="126" language="java" name="store.fnfm.service.ProductsServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/ProductsServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4749" y="2696"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="127" language="java" name="store.fnfm.service.SellerChartServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/SellerChartServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4973" y="2633"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="128" language="java" name="store.fnfm.service.BoardService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/BoardService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4160" y="3000"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="129" language="java" name="store.fnfm.service.OrderService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/OrderService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3501" y="2264"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="130" language="java" name="store.fnfm.service.SearchAllServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/SearchAllServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5008" y="3250"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="131" language="java" name="store.fnfm.service.SellerChartService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/SellerChartService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4966" y="3015"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="132" language="java" name="store.fnfm.service.MainProductServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/MainProductServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3794" y="3399"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="133" language="java" name="store.fnfm.service.SellerProductService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/SellerProductService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4608" y="2282"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="134" language="java" name="store.fnfm.service.NoticeService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/NoticeService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4630" y="3453"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="135" language="java" name="store.fnfm.service.QaaReplyService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/QaaReplyService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3274" y="2210"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="136" language="java" name="store.fnfm.service.FindService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/FindService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2794" y="2858"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="137" language="java" name="store.fnfm.service.NoticeServiceImpl" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/NoticeServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3998" y="3435"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="138" language="java" name="store.fnfm.service.MessageService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/MessageService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4143" y="2309"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="139" language="java" name="store.fnfm.service.FileUploadService" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/service/FileUploadService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2577" y="1819"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="140" language="java" name="store.fnfm.vo" project="FNF_M" file="/FNF_M/src/main/java/store/fnfm/vo" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="4400" width="2300" x="5435" y="84"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="141" language="java" name="store.fnfm.vo.OrdersVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/OrdersVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5595" y="979"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="142" language="java" name="store.fnfm.vo.BoardVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/BoardVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5852" y="412"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="143" language="java" name="store.fnfm.vo.MemberVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/MemberVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6097" y="466"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="144" language="java" name="store.fnfm.vo.CartVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/CartVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6342" y="475"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="145" language="java" name="store.fnfm.vo.NoticeVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/NoticeVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6586" y="412"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="146" language="java" name="store.fnfm.vo.Criteria" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/Criteria.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6158" y="3103"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="147" language="java" name="store.fnfm.vo.FaqVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/FaqVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6772" y="412"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="148" language="java" name="store.fnfm.vo.InquiryVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/InquiryVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6965" y="358"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="149" language="java" name="store.fnfm.vo.MileVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/MileVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="7154" y="331"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="150" language="java" name="store.fnfm.vo.MyOrderVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/MyOrderVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="7340" y="412"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="151" language="java" name="store.fnfm.vo.AuthVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/AuthVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6327" y="3050"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="152" language="java" name="store.fnfm.vo.PageDTO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/PageDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6614" y="2701"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="153" language="java" name="store.fnfm.vo.QaaVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/QaaVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="7532" y="547"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="154" language="java" name="store.fnfm.vo.SellerVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/SellerVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5960" y="1227"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="155" language="java" name="store.fnfm.vo.QaaReplyVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/QaaReplyVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6471" y="1029"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="156" language="java" name="store.fnfm.vo.Criteria4" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/Criteria4.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6658" y="975"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="157" language="java" name="store.fnfm.vo.Criteria3" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/Criteria3.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5983" y="3059"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="158" language="java" name="store.fnfm.vo.Criteria2" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/Criteria2.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5783" y="3056"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="159" language="java" name="store.fnfm.vo.MembersVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/MembersVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6845" y="1245"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="160" language="java" name="store.fnfm.vo.MessageVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/MessageVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="7039" y="1110"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="161" language="java" name="store.fnfm.vo.Product2VO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/Product2VO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="7231" y="1290"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="162" language="java" name="store.fnfm.vo.ProductsVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/ProductsVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="7530" y="1400"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="163" language="java" name="store.fnfm.vo.SellerChartVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/SellerChartVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5570" y="2863"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="164" language="java" name="store.fnfm.vo.MyMessageVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/MyMessageVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5776" y="2116"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="165" language="java" name="store.fnfm.vo.ProductVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/ProductVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6127" y="2287"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="166" language="java" name="store.fnfm.vo.PageDTO4" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/PageDTO4.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6441" y="2692"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="167" language="java" name="store.fnfm.vo.PageDTO5" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/PageDTO5.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6784" y="2692"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="168" language="java" name="store.fnfm.vo.PageDTO2" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/PageDTO2.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6284" y="993"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="169" language="java" name="store.fnfm.vo.PageDTO3" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/PageDTO3.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6957" y="2692"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="170" language="java" name="store.fnfm.vo.SellerProductVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/SellerProductVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6563" y="1770"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="171" language="java" name="store.fnfm.vo.Criteria5" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/Criteria5.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6307" y="1458"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="172" language="java" name="store.fnfm.vo.UserVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/UserVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6831" y="2189"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="173" language="java" name="store.fnfm.vo.LoginVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/LoginVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6285" y="3724"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="174" language="java" name="store.fnfm.vo.CustomerVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/CustomerVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6690" y="3904"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="175" language="java" name="store.fnfm.vo.OrderVO" project="FNF_M" 
+    file="/FNF_M/src/main/java/store/fnfm/vo/OrderVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="7371" y="2567"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="176">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="177" name="sellerProductService"/>      
+      <multiplicity id="178" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="133" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="179">    
+    <end type="SOURCE" refId="98"/>    
+    <end type="TARGET" refId="129"/>  
+  </realization>  
+  <realization id="180">    
+    <end type="SOURCE" refId="58"/>    
+    <end type="TARGET" refId="64"/>  
+  </realization>  
+  <association id="181">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="182" name="cartService"/>      
+      <multiplicity id="183" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="102" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="184">    
+    <end type="SOURCE" refId="44"/>    
+    <end type="TARGET" refId="40"/>  
+  </realization>  
+  <realization id="185">    
+    <end type="SOURCE" refId="137"/>    
+    <end type="TARGET" refId="134"/>  
+  </realization>  
+  <association id="186">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="187" name="customerService"/>      
+      <multiplicity id="188" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="91" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="189">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="190" name="userService"/>      
+      <multiplicity id="191" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="123" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="192">    
+    <end type="SOURCE" refId="52"/>    
+    <end type="TARGET" refId="55"/>  
+  </realization>  
+  <realization id="193">    
+    <end type="SOURCE" refId="127"/>    
+    <end type="TARGET" refId="131"/>  
+  </realization>  
+  <association id="194">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="195" name="findService"/>      
+      <multiplicity id="196" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="136" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="197">    
+    <end type="SOURCE" refId="103"/>    
+    <end type="TARGET" refId="95"/>  
+  </realization>  
+  <realization id="198">    
+    <end type="SOURCE" refId="117"/>    
+    <end type="TARGET" refId="92"/>  
+  </realization>  
+  <association id="199">    
+    <end type="SOURCE" refId="168" navigable="false">      
+      <attribute id="200" name="cri2"/>      
+      <multiplicity id="201" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="158" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="202">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="203" name="loginVo"/>      
+      <multiplicity id="204" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="173" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="205">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="45"/>  
+  </realization>  
+  <realization id="206">    
+    <end type="SOURCE" refId="122"/>    
+    <end type="TARGET" refId="105"/>  
+  </realization>  
+  <association id="207">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="208" name="qaaService"/>      
+      <multiplicity id="209" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="99" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="210">    
+    <end type="SOURCE" refId="104" navigable="false">      
+      <attribute id="211" name="messageDAO"/>      
+      <multiplicity id="212" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="43" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="213">    
+    <end type="SOURCE" refId="50"/>    
+    <end type="TARGET" refId="71"/>  
+  </realization>  
+  <realization id="214">    
+    <end type="SOURCE" refId="130"/>    
+    <end type="TARGET" refId="118"/>  
+  </realization>  
+  <realization id="215">    
+    <end type="SOURCE" refId="97"/>    
+    <end type="TARGET" refId="135"/>  
+  </realization>  
+  <association id="216">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="217" name="service"/>      
+      <multiplicity id="218" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="119" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="219">    
+    <end type="SOURCE" refId="51"/>    
+    <end type="TARGET" refId="53"/>  
+  </realization>  
+  <association id="220">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="221" name="fileUploadService"/>      
+      <multiplicity id="222" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="139" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="223">    
+    <end type="SOURCE" refId="82"/>    
+    <end type="TARGET" refId="84"/>  
+  </nesting>  
+  <realization id="224">    
+    <end type="SOURCE" refId="109"/>    
+    <end type="TARGET" refId="119"/>  
+  </realization>  
+  <association id="225">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="226" name="fileUploadService"/>      
+      <multiplicity id="227" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="139" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="228">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="229" name="boardService"/>      
+      <multiplicity id="230" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="128" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="231">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="232" name="fileUploadService"/>      
+      <multiplicity id="233" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="139" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="234">    
+    <end type="SOURCE" refId="88" navigable="false">      
+      <attribute id="235" name="loginVo"/>      
+      <multiplicity id="236" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="173" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="237">    
+    <end type="SOURCE" refId="37"/>    
+    <end type="TARGET" refId="56"/>  
+  </realization>  
+  <association id="238">    
+    <end type="SOURCE" refId="93" navigable="false">      
+      <attribute id="239" name="mapper"/>      
+      <multiplicity id="240" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="76" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="241">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="242" name="qaaService"/>      
+      <multiplicity id="243" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="99" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="244">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="245" name="naverLoginBo"/>      
+      <multiplicity id="246" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="81" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="247">    
+    <end type="SOURCE" refId="107"/>    
+    <end type="TARGET" refId="133"/>  
+  </realization>  
+  <realization id="248">    
+    <end type="SOURCE" refId="132"/>    
+    <end type="TARGET" refId="108"/>  
+  </realization>  
+  <association id="249">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="250" name="noticeService"/>      
+      <multiplicity id="251" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="134" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="252">    
+    <end type="SOURCE" refId="125" navigable="false">      
+      <attribute id="253" name="customerDao"/>      
+      <multiplicity id="254" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="49" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="255">    
+    <end type="SOURCE" refId="59"/>    
+    <end type="TARGET" refId="66"/>  
+  </realization>  
+  <association id="256">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="257" name="noticeService"/>      
+      <multiplicity id="258" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="134" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="259">    
+    <end type="SOURCE" refId="152" navigable="false">      
+      <attribute id="260" name="cri2"/>      
+      <multiplicity id="261" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="158" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="262">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="263" name="messageService"/>      
+      <multiplicity id="264" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="138" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="265">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="266" name="fileUploadService"/>      
+      <multiplicity id="267" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="139" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="268">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="269" name="searchAllService"/>      
+      <multiplicity id="270" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="118" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="271">    
+    <end type="SOURCE" refId="93"/>    
+    <end type="TARGET" refId="111"/>  
+  </realization>  
+  <association id="272">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="273" name="fileUploadService"/>      
+      <multiplicity id="274" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="139" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="275">    
+    <end type="SOURCE" refId="120"/>    
+    <end type="TARGET" refId="102"/>  
+  </realization>  
+  <association id="276">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="277" name="sellerService"/>      
+      <multiplicity id="278" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="110" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="279">    
+    <end type="SOURCE" refId="120" navigable="false">      
+      <attribute id="280" name="cartDao"/>      
+      <multiplicity id="281" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="63" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="282">    
+    <end type="SOURCE" refId="89" navigable="false">      
+      <attribute id="283" name="loginMapper"/>      
+      <multiplicity id="284" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="78" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="285">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="286" name="orderService"/>      
+      <multiplicity id="287" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="129" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="288">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="289" name="userService"/>      
+      <multiplicity id="290" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="123" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="291">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="292" name="cartService"/>      
+      <multiplicity id="293" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="102" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="294">    
+    <end type="SOURCE" refId="130" navigable="false">      
+      <attribute id="295" name="searchAllDao"/>      
+      <multiplicity id="296" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="71" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="297">    
+    <end type="SOURCE" refId="125"/>    
+    <end type="TARGET" refId="91"/>  
+  </realization>  
+  <association id="298">    
+    <end type="SOURCE" refId="33" navigable="false">      
+      <attribute id="299" name="productAdminService"/>      
+      <multiplicity id="300" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="96" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="301">    
+    <end type="SOURCE" refId="67"/>    
+    <end type="TARGET" refId="54"/>  
+  </realization>  
+  <association id="302">    
+    <end type="SOURCE" refId="84" navigable="false">      
+      <attribute id="303" name="INSTANCE"/>      
+      <multiplicity id="304" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="82" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="305">    
+    <end type="SOURCE" refId="114"/>    
+    <end type="TARGET" refId="96"/>  
+  </realization>  
+  <association id="306">    
+    <end type="SOURCE" refId="169" navigable="false">      
+      <attribute id="307" name="cri"/>      
+      <multiplicity id="308" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="146" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="309">    
+    <end type="SOURCE" refId="121" navigable="false">      
+      <attribute id="310" name="userDao"/>      
+      <multiplicity id="311" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="45" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="312">    
+    <end type="SOURCE" refId="97" navigable="false">      
+      <attribute id="313" name="qaaReplyDao"/>      
+      <multiplicity id="314" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="47" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="315">    
+    <end type="SOURCE" refId="137" navigable="false">      
+      <attribute id="316" name="noticeDao"/>      
+      <multiplicity id="317" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="65" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="318">    
+    <end type="SOURCE" refId="83" navigable="false">      
+      <attribute id="319" name="customerService"/>      
+      <multiplicity id="320" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="91" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="321">    
+    <end type="SOURCE" refId="124" navigable="false">      
+      <attribute id="322" name="boardDao"/>      
+      <multiplicity id="323" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="40" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="324">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="325" name="service"/>      
+      <multiplicity id="326" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="113" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="327">    
+    <end type="SOURCE" refId="57"/>    
+    <end type="TARGET" refId="69"/>  
+  </realization>  
+  <realization id="328">    
+    <end type="SOURCE" refId="72"/>    
+    <end type="TARGET" refId="60"/>  
+  </realization>  
+  <realization id="329">    
+    <end type="SOURCE" refId="126"/>    
+    <end type="TARGET" refId="112"/>  
+  </realization>  
+  <association id="330">    
+    <end type="SOURCE" refId="152" navigable="false">      
+      <attribute id="331" name="cri"/>      
+      <multiplicity id="332" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="146" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="333">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="49"/>  
+  </realization>  
+  <association id="334">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="335" name="mainProductService"/>      
+      <multiplicity id="336" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="108" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="337">    
+    <end type="SOURCE" refId="61"/>    
+    <end type="TARGET" refId="65"/>  
+  </realization>  
+  <realization id="338">    
+    <end type="SOURCE" refId="124"/>    
+    <end type="TARGET" refId="128"/>  
+  </realization>  
+  <association id="339">    
+    <end type="SOURCE" refId="115" navigable="false">      
+      <attribute id="340" name="loginMapper"/>      
+      <multiplicity id="341" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="78" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="342">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="47"/>  
+  </realization>  
+  <realization id="343">    
+    <end type="SOURCE" refId="121"/>    
+    <end type="TARGET" refId="123"/>  
+  </realization>  
+  <realization id="344">    
+    <end type="SOURCE" refId="68"/>    
+    <end type="TARGET" refId="70"/>  
+  </realization>  
+  <association id="345">    
+    <end type="SOURCE" refId="94" navigable="false">      
+      <attribute id="346" name="inquiryDAO"/>      
+      <multiplicity id="347" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="69" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="348">    
+    <end type="SOURCE" refId="106" navigable="false">      
+      <attribute id="349" name="qaaDao"/>      
+      <multiplicity id="350" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="55" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="351">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <association id="352">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="353" name="fileUploadService"/>      
+      <multiplicity id="354" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="139" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="355">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="356" name="qaaReplyService"/>      
+      <multiplicity id="357" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="135" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="358">    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="359" name="sellerChartService"/>      
+      <multiplicity id="360" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="131" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="361">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="63"/>  
+  </realization>  
+  <association id="362">    
+    <end type="SOURCE" refId="127" navigable="false">      
+      <attribute id="363" name="sellerChartDAO"/>      
+      <multiplicity id="364" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="62" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="365">    
+    <end type="SOURCE" refId="100" navigable="false">      
+      <attribute id="366" name="sellerDao"/>      
+      <multiplicity id="367" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="56" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="368">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="369" name="inquiryService"/>      
+      <multiplicity id="370" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="101" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="371">    
+    <end type="SOURCE" refId="106"/>    
+    <end type="TARGET" refId="99"/>  
+  </realization>  
+  <association id="372">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="373" name="sellerService"/>      
+      <multiplicity id="374" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="110" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="375">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="376" name="customerService"/>      
+      <multiplicity id="377" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="91" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="378">    
+    <end type="SOURCE" refId="114" navigable="false">      
+      <attribute id="379" name="productAdminDao"/>      
+      <multiplicity id="380" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="54" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="381">    
+    <end type="SOURCE" refId="104"/>    
+    <end type="TARGET" refId="138"/>  
+  </realization>  
+  <association id="382">    
+    <end type="SOURCE" refId="174" navigable="false">      
+      <attribute id="383" name="authList"/>      
+      <multiplicity id="384" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="151" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="385">    
+    <end type="SOURCE" refId="103" navigable="false">      
+      <attribute id="386" name="faqDao"/>      
+      <multiplicity id="387" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="70" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="388">    
+    <end type="SOURCE" refId="80" navigable="false">      
+      <attribute id="389" name="customerService"/>      
+      <multiplicity id="390" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="91" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="391">    
+    <end type="SOURCE" refId="107" navigable="false">      
+      <attribute id="392" name="sellerProductDAO"/>      
+      <multiplicity id="393" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="60" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="394">    
+    <end type="SOURCE" refId="80" navigable="false">      
+      <attribute id="395" name="naverLoginBo"/>      
+      <multiplicity id="396" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="81" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="397">    
+    <end type="SOURCE" refId="167" navigable="false">      
+      <attribute id="398" name="cri"/>      
+      <multiplicity id="399" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="146" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="400">    
+    <end type="SOURCE" refId="109" navigable="false">      
+      <attribute id="401" name="mapper"/>      
+      <multiplicity id="402" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="77" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="403">    
+    <end type="SOURCE" refId="166" navigable="false">      
+      <attribute id="404" name="cri3"/>      
+      <multiplicity id="405" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="157" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="406">    
+    <end type="SOURCE" refId="94"/>    
+    <end type="TARGET" refId="101"/>  
+  </realization>  
+  <association id="407">    
+    <end type="SOURCE" refId="173" navigable="false">      
+      <attribute id="408" name="authList"/>      
+      <multiplicity id="409" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="151" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="410">    
+    <end type="SOURCE" refId="100"/>    
+    <end type="TARGET" refId="110"/>  
+  </realization>  
+  <realization id="411">    
+    <end type="SOURCE" refId="115"/>    
+    <end type="TARGET" refId="136"/>  
+  </realization>  
+  <association id="412">    
+    <end type="SOURCE" refId="132" navigable="false">      
+      <attribute id="413" name="mainProductDao"/>      
+      <multiplicity id="414" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="53" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="415">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="416" name="service"/>      
+      <multiplicity id="417" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="112" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="418">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="419" name="faqService"/>      
+      <multiplicity id="420" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="95" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="421">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="422" name="oservice"/>      
+      <multiplicity id="423" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="111" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="424">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="425" name="faqService"/>      
+      <multiplicity id="426" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="95" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="427">    
+    <end type="SOURCE" refId="42"/>    
+    <end type="TARGET" refId="62"/>  
+  </realization>  
+  <realization id="428">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="43"/>  
+  </realization>  
+  <realization id="429">    
+    <end type="SOURCE" refId="46"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <association id="430">    
+    <end type="SOURCE" refId="98" navigable="false">      
+      <attribute id="431" name="orderDao"/>      
+      <multiplicity id="432" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="66" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="433">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <realization id="434">    
+    <end type="SOURCE" refId="116"/>    
+    <end type="TARGET" refId="113"/>  
+  </realization>  
+  <association id="435">    
+    <end type="SOURCE" refId="117" navigable="false">      
+      <attribute id="436" name="orderSellerDAO"/>      
+      <multiplicity id="437" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="438">    
+    <end type="SOURCE" refId="116" navigable="false">      
+      <attribute id="439" name="mapper"/>      
+      <multiplicity id="440" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="75" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="441">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="442" name="ordersSellerSerivce"/>      
+      <multiplicity id="443" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="92" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="444">    
+    <end type="SOURCE" refId="126" navigable="false">      
+      <attribute id="445" name="mapper"/>      
+      <multiplicity id="446" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="74" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		
+<mapper namespace="SellerProduct">
+
+<!-- 
+int idx, stock, price, sell_num, recomm;
+시퀀스,재고,가격,판매수,추천상품상태
+String  pcode, sellerid, pname, pcontents, origin, unit, filename, category,category2;
+상품코드,판매자id,상품명,상품내용,원산지,단위,파일명,카테고리
+Date writedate 
+등록일
+-->
+<resultMap type="SellerProductVO" id="ProductResultMap">
+	<result property="idx" column="idx" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+	<result property="stock" column="stock" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+	<result property="price" column="price" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+	<result property="sell_num" column="sell_num" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+	<result property="recomm" column="recomm" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+	<result property="pcode" column="pcode" javaType="java.lang.String" jdbcType="VARCHAR"/>
+	<result property="origin" column="origin" javaType="java.lang.String" jdbcType="VARCHAR"/>
+	<result property="sellerid" column="sellerid" javaType="java.lang.String" jdbcType="VARCHAR"/>
+	<result property="pname" column="pname" javaType="java.lang.String" jdbcType="VARCHAR"/>
+	<result property="pcontents" column="pcontents" javaType="java.lang.String" jdbcType="VARCHAR"/>
+	<result property="unit" column="unit" javaType="java.lang.String" jdbcType="VARCHAR"/>
+	<result property="filename" column="filename" javaType="java.lang.String" jdbcType="VARCHAR"/>
+	<result property="category" column="category" javaType="java.lang.String" jdbcType="VARCHAR"/>
+	<result property="category2" column="category2" javaType="java.lang.String" jdbcType="VARCHAR"/>
+	<result property="writedate" column="writedate" javaType="String" jdbcType="DATE" />
+</resultMap>
+
+<!-- ==============================ProductUpdate================================ -->
+<!-- ${} 써주면 알아서 boardVO.getIdx() 값을 가져온다 -->
+<update id="updateSP" parameterType="SellerProductVO">
+	{ call product_update(#{idx},#{pname},#{pcontents},#{origin},#{unit},#{filename},#{category},#{stock},#{price},#{category2})}
+</update>
+<!-- ==================================================================== -->
+
+
+<!-- ==============================Delete=================================== -->
+<parameterMap type="Integer" id="deleteMap">
+	<parameter property="idx" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+</parameterMap>
+<delete id="deleteSP" parameterMap="deleteMap" >
+	{ call product_delete(?)}
+</delete>
+<!-- ==================================================================== -->
+
+<!-- ===============================Paging===================================== -->
+<parameterMap type="hashMap" id="selectCountMap">
+	<parameter property="sellerid" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="result" javaType="Integer" jdbcType="INTEGER" mode="OUT"/>
+</parameterMap>
+<select id="selectTotalCountSP" parameterMap="selectCountMap" statementType="CALLABLE" parameterType="hashMap">
+	{ call product_seller_total_count(?,?)}
+</select>
+<!-- ==================================================================== -->
+
+<!-- ====================상품코드중복체크======================== -->
+<select id="pcodeCheck" parameterType="String" resultType="Integer">
+      SELECT COUNT(*) FROM product
+      WHERE pcode = #{pcode}
+</select>
+<!-- ============================================ -->
+
+<!-- =======================================Insert========================================= -->
+	<insert id="insert" parameterType="SellerProductVO">
+		INSERT INTO Product(idx,sellerid,pcode,pname,pcontents,origin,unit,filename,category,stock,price,writedate,category2)
+		VALUES (product_idx_seq.NEXTVAL, #{sellerid}, #{pcode}, #{pname},  #{pcontents},  #{origin},  #{unit}, #{filename},  #{category}, #{stock}, #{price},SYSDATE, #{category2})
+	</insert>
+<!-- ================================================================================ -->
+
+<!-- =======================================InsertSP========================================= -->
+	<parameterMap type="SellerProductVO" id="insertMap">
+		<parameter property="sellerid" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="pcode" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="pname" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="pcontents" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="origin" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="unit" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="filename" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="category" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="category2" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="stock" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+		<parameter property="price" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	</parameterMap>
+	<insert id="insertSP" parameterType="SellerProductVO" parameterMap="insertMap">
+		{ call product_insert(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) }
+	</insert>
+<!-- ================================================================================ -->
+
+<!-- ========================================selectAll======================================== -->
+	<parameterMap type="SellerProductVO" id="selectAllMap">
+		<parameter property="sellerid" javaType="String" jdbcType="VARCHAR" mode="IN" />
+		<parameter property="results" javaType="ResultSet" jdbcType="CURSOR" mode="OUT" resultMap="ProductResultMap"/>
+		<parameter property="start" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+		<parameter property="end" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	</parameterMap>
+	<select id="selectAllSP" parameterMap="selectAllMap" parameterType="hashMap" statementType="CALLABLE">
+	{ call product_selectAll(?,?,?,?)}
+	</select>
+<!-- ================================================================================ -->
+
+<!-- ========================================selectOne======================================== -->
+<parameterMap type="SellerProductVO" id="selectOneMap">
+	<parameter property="idx" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	<parameter property="result" javaType="ResultSet" jdbcType="CURSOR" mode="OUT" resultMap="ProductResultMap"/>	
+</parameterMap>
+<select id="selectOneSP" parameterMap="selectOneMap" parameterType="hashMap" statementType="CALLABLE">
+{ call product_select(?,?)}
+</select>
+<!-- ==========================================OUTparameter있으면 statementType 적어야함====================================== -->
+
+<!-- ====================================sellerList상품검색============================================ -->
+<select id="searchSelect" resultMap="ProductResultMap" resultType="SellerProductVO" parameterType="SellerProductVO">
+	SELECT * 
+	FROM product
+	WHERE 
+	(
+	pcode LIKE CONCAT('%',(CONCAT(#{pcode},'%')))
+	OR pname LIKE CONCAT('%',(CONCAT(#{pname},'%')))
+	OR origin LIKE CONCAT('%',(CONCAT(#{origin},'%')))
+	OR category LIKE CONCAT('%',(CONCAT(#{category},'%')))
+	OR category2 LIKE CONCAT('%',(CONCAT(#{category2},'%')))
+	OR TO_CHAR(writedate, 'yyyy-mm-dd') LIKE CONCAT('%',(CONCAT(#{writedate},'%')))
+	) AND sellerid = #{sellerid}
+	ORDER BY idx DESC
+</select>
+<!-- ================================================================================ -->
+
+<!-- ===============================sellerSearchPaging===================================== -->
+<parameterMap type="hashMap" id="searchCountMap">
+	<parameter property="sellerid" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="pcode" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="pname" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="origin" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="category" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="category2" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="writedate" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="result" javaType="Integer" jdbcType="INTEGER" mode="OUT"/>
+</parameterMap>
+<select id="searchTotalCountSP" parameterMap="searchCountMap" statementType="CALLABLE" parameterType="hashMap">
+	{ call product_seller_search_total(?,?,?,?,?,?,?,?)}
+</select>
+<!-- ==================================================================== -->
+
+<!-- ========================================sellerSearchAll======================================== -->
+	<parameterMap type="SellerProductVO" id="searchAllMap">
+		<parameter property="sellerid" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="pcode" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="pname" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="origin" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="category" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="category2" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="writedate" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="results" javaType="ResultSet" jdbcType="CURSOR" mode="OUT" resultMap="ProductResultMap"/>
+		<parameter property="start" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+		<parameter property="end" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	</parameterMap>
+	<select id="searchSelectList" parameterMap="searchAllMap" parameterType="hashMap" statementType="CALLABLE">
+	{ call product_seller_search(?,?,?,?,?,?,?,?,?,?)}
+	</select>
+<!-- ================================================================================ -->
+
+<!-- ========================================selectAll======================================== -->
+	<parameterMap type="SellerProductVO" id="MSGselectIDMap">
+		<parameter property="idx" javaType="Integer" jdbcType="INTEGER" mode="IN" />
+		<parameter property="result" javaType="ResultSet" jdbcType="CURSOR" mode="OUT" resultMap="ProductResultMap"/>
+	</parameterMap>
+	<select id="MSGselectSellerID" parameterMap="MSGselectIDMap" parameterType="hashMap" statementType="CALLABLE">
+	{ call MESSAGE_SEND_SELECT_SELLER(?,?)}
+	</select>
+<!-- ================================================================================ -->
+
+</mapper>

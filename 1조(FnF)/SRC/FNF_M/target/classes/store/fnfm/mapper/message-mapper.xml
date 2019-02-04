@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		
+<mapper namespace="Message">
+
+	<resultMap type="MessageVO" id="msgSelectResultMap">
+		<result column="idx" property="idx" jdbcType="INTEGER" javaType="Integer"/>
+		<result column="send_id" property="send_id" jdbcType="VARCHAR" javaType="String"/>
+		<result column="receive_id" property="receive_id" jdbcType="VARCHAR" javaType="String"/>
+		<result column="title" property="title" jdbcType="VARCHAR" javaType="String"/>
+		<result column="contents" property="contents" jdbcType="VARCHAR" javaType="String"/>
+		<result column="writedate" property="writedate" jdbcType="DATE" javaType="String"/>
+		<result column="status" property="status" jdbcType="VARCHAR" javaType="String"/>
+		<result column="del_status" property="del_status" jdbcType="VARCHAR" javaType="String"/>
+	</resultMap>
+	
+<!-- ==============================Insert=============================== -->
+<parameterMap type="MessageVO" id="msgInsertMap">
+	<parameter property="send_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="receive_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="title" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="contents" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+</parameterMap>																									<!-- alias -->
+<insert id="msgInsert" parameterMap="msgInsertMap" parameterType="MessageVO">
+	{ call message_insert(?,?,?,?) }
+</insert>
+<!-- ============================================================= -->
+
+<!-- ========================================SendSelectAll======================================== -->
+	<parameterMap type="MessageVO" id="msgSelectAllMap">
+		<parameter property="send_id" javaType="String" jdbcType="VARCHAR" mode="IN" />
+		<parameter property="results" javaType="ResultSet" jdbcType="CURSOR" mode="OUT" resultMap="msgSelectResultMap"/>
+		<parameter property="start" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+		<parameter property="end" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	</parameterMap>
+	<select id="msgSelectAll" parameterMap="msgSelectAllMap" parameterType="hashMap" statementType="CALLABLE">
+	{ call MESSAGE_SEND_SELECTALL(?,?,?,?)}
+	</select>
+<!-- ================================================================================ -->
+<!-- ========================================ReceiveSelectAll======================================== -->
+	<parameterMap type="MessageVO" id="RmsgSelectAllMap">
+		<parameter property="receive_id" javaType="String" jdbcType="VARCHAR" mode="IN" />
+		<parameter property="results" javaType="ResultSet" jdbcType="CURSOR" mode="OUT" resultMap="msgSelectResultMap"/>
+		<parameter property="start" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+		<parameter property="end" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	</parameterMap>
+	<select id="RmsgSelectAll" parameterMap="RmsgSelectAllMap" parameterType="hashMap" statementType="CALLABLE">
+	{ call MESSAGE_RECEIVE_SELECTALL(?,?,?,?)}
+	</select>
+<!-- ================================================================================ -->
+
+<!-- ===============================SendPaging===================================== -->
+<parameterMap type="hashMap" id="msgSelectCountMap">
+	<parameter property="send_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="result" javaType="Integer" jdbcType="INTEGER" mode="OUT"/>
+</parameterMap>
+<select id="msgGetTotalCount" parameterMap="msgSelectCountMap" statementType="CALLABLE" parameterType="hashMap">
+	{ call MESSAGE_SEND_TOTAL_COUNT(?,?)}
+</select>
+<!-- ==================================================================== -->
+<!-- ===============================ReceivePaging===================================== -->
+<parameterMap type="hashMap" id="RmsgSelectCountMap">
+	<parameter property="receive_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="result" javaType="Integer" jdbcType="INTEGER" mode="OUT"/>
+</parameterMap>
+<select id="RmsgGetTotalCount" parameterMap="RmsgSelectCountMap" statementType="CALLABLE" parameterType="hashMap">
+	{ call MESSAGE_RECEIVE_TOTAL_COUNT(?,?)}
+</select>
+<!-- ==================================================================== -->
+
+<!-- ========================================selectOne======================================== -->
+<parameterMap type="MessageVO" id="MSGselectOneMap">
+	<parameter property="idx" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	<parameter property="result" javaType="ResultSet" jdbcType="CURSOR" mode="OUT" resultMap="msgSelectResultMap"/>	
+</parameterMap>
+<select id="msgSelectOne" parameterMap="MSGselectOneMap" parameterType="hashMap" statementType="CALLABLE">
+{ call MESSAGE_SELECT_ONE(?,?)}
+</select>
+<!-- ==========================================OUTparameter있으면 statementType 적어야함====================================== -->
+
+<!-- ===========================SendDeleteUpdate========================================= -->
+<!-- ${} 써주면 알아서 boardVO.getIdx() 값을 가져온다 -->
+<parameterMap type="MessageVO" id="MSGupdateMap">
+	<parameter property="idx" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+</parameterMap>
+<update id="SendMsgDelete" parameterType="Integer" parameterMap="MSGupdateMap" >
+	{ call MESSAGE_SEND_DELETE(?)}
+</update>
+<!-- ==================================================================== -->
+<!-- ===========================ReceiveDeleteUpdate========================================= -->
+<parameterMap type="MessageVO" id="RMSGupdateMap">
+	<parameter property="idx" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+</parameterMap>
+<update id="ReceiveMsgDelete" parameterType="Integer" parameterMap="RMSGupdateMap" >
+	{ call MESSAGE_RECEIVE_DELETE(?)}
+</update>
+<!-- ==================================================================== -->
+
+<!-- ========================================SMSGsellerSearchAll======================================== -->
+	<parameterMap type="MessageVO" id="SMSGsearchAllMap">
+		<parameter property="send_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="receive_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="title" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="writedate" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="results" javaType="ResultSet" jdbcType="CURSOR" mode="OUT" resultMap="msgSelectResultMap"/>
+		<parameter property="start" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+		<parameter property="end" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	</parameterMap>
+	<select id="SmsgSerachSelectList" parameterMap="SMSGsearchAllMap" parameterType="hashMap" statementType="CALLABLE">
+	{ call MESSAGE_SEND_SEARCH(?,?,?,?,?,?,?)}
+	</select>
+<!-- ================================================================================ -->
+<!-- ========================================RMSGsellerSearchAll======================================== -->
+	<parameterMap type="MessageVO" id="RMSGsearchAllMap">
+		<parameter property="send_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="receive_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="title" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="writedate" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="results" javaType="ResultSet" jdbcType="CURSOR" mode="OUT" resultMap="msgSelectResultMap"/>
+		<parameter property="start" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+		<parameter property="end" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	</parameterMap>
+	<select id="RmsgSerachSelectList" parameterMap="RMSGsearchAllMap" parameterType="hashMap" statementType="CALLABLE">
+	{ call MESSAGE_RECEIVE_SEARCH(?,?,?,?,?,?,?)}
+	</select>
+<!-- ================================================================================ -->
+
+<!-- ===============================SMSGsellerSearchPaging===================================== -->
+<parameterMap type="hashMap" id="SMSGsearchCountMap">
+	<parameter property="send_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="receive_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="title" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="writedate" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="result" javaType="Integer" jdbcType="INTEGER" mode="OUT"/>
+</parameterMap>
+<select id="SmsgSerachTotalCount" parameterMap="SMSGsearchCountMap" statementType="CALLABLE" parameterType="hashMap">
+	{ call MESSAGE_SEND_SEARCH_TOTAL(?,?,?,?,?)}
+</select>
+<!-- ==================================================================== -->
+<!-- ===============================RMSGsellerSearchPaging===================================== -->
+<parameterMap type="hashMap" id="RMSGsearchCountMap">
+	<parameter property="send_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="receive_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="title" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="writedate" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="result" javaType="Integer" jdbcType="INTEGER" mode="OUT"/>
+</parameterMap>
+<select id="RmsgSerachTotalCount" parameterMap="RMSGsearchCountMap" statementType="CALLABLE" parameterType="hashMap">
+	{ call MESSAGE_RECEIVE_SEARCH_TOTAL(?,?,?,?,?)}
+</select>
+<!-- ==================================================================== -->
+
+<!-- ===========================ReadReceiveMSG========================================= -->
+<parameterMap type="MessageVO" id="readMSGupdateMap">
+	<parameter property="idx" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+</parameterMap>
+<update id="readRmsgUpdate" parameterType="Integer" parameterMap="readMSGupdateMap" >
+	{ call MESSAGE_RECEIVE_READ(?)}
+</update>
+<!-- ==================================================================== -->
+
+<!-- ====================유저아이디 체크======================== -->
+<select id="useridCheck" parameterType="String" resultType="Integer">
+    SELECT COUNT(*) 
+  	FROM customer
+	WHERE user_id = #{user_id} AND status = 0 OR status=1
+</select>
+<!-- ============================================ -->
+
+
+
+</mapper>

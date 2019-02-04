@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<!-- user -->
+		<typeAlias type="store.fnfm.vo.MyMessageVO" alias="MyMessageVO"/>
+		<!-- seller -->
+		<typeAlias type="store.fnfm.vo.SellerProductVO" alias="SellerProductVO" />
+		<typeAlias type="store.fnfm.vo.SellerChartVO" alias="SellerChartVO" />
+		<typeAlias type="store.fnfm.vo.InquiryVO" alias="InquiryVO" />
+		<typeAlias type="store.fnfm.vo.MessageVO" alias="MessageVO" />
+		<typeAlias type="store.fnfm.vo.OrdersVO" alias="OrdersVO" />
+		<!-- ===== -->
+		
+		<typeAlias alias="cartVo" type="store.fnfm.vo.CartVO" />
+		<typeAlias alias="orderVo" type="store.fnfm.vo.OrderVO" />
+		<typeAlias alias="memberVo" type="store.fnfm.vo.MemberVO" />
+		<typeAlias type="store.fnfm.vo.LoginVO" alias="loginVo"/>
+		<typeAlias type="store.fnfm.vo.AuthVO" alias="authVO"/>
+		<typeAlias type="store.fnfm.vo.CustomerVO" alias="customerVo" />
+		<typeAlias type="store.fnfm.vo.QaaVO" alias="qaaVo" />
+		<typeAlias type="store.fnfm.vo.FaqVO" alias="faqVo" />
+		<typeAlias type="store.fnfm.vo.NoticeVO" alias="noticeVo" />
+		
+		<!-- admin -->
+		<typeAlias type="store.fnfm.vo.UserVO" alias="userVo"/>
+		<typeAlias type="store.fnfm.vo.SellerVO" alias="sellerVo"/>
+		<typeAlias type="store.fnfm.vo.ProductVO" alias="productVo"/>
+		<typeAlias type="store.fnfm.vo.BoardVO" alias="boardVo"/>
+		<typeAlias type="store.fnfm.vo.QaaReplyVO" alias="qaaReplyVo"/>
+		<!-- ===== -->
+	</typeAliases>
+</configuration>
+
+
+

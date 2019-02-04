@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Cart">
+	<resultMap type="cartVo" id="cartMap">
+		<result column="CART_IDX" property="cart_idx" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="USER_ID" property="user_id" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="PCODE" property="pcode" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="PRODUCT_COUNT" property="product_count" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="PRICE" property="price" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="PNAME" property="pname" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="money" property="money" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="FILENAME" property="filename" javaType="java.lang.String" jdbcType="VARCHAR"/>
+	</resultMap>
+	<!--선택된user_id로 카트리스트 출력  -->
+	<parameterMap type="cartVo" id="parameterCartReadMap">
+		<parameter property="user_id" mode="IN" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<parameter property="result" mode="OUT" 
+			javaType="java.sql.ResultSet" jdbcType="CURSOR" resultMap="cartMap"/>
+	</parameterMap>
+	<select id="select" statementType="CALLABLE" parameterMap="parameterCartReadMap" parameterType="hashMap">
+		{  call sp_cart_selectall(?,?)}
+	</select> 
+	<!-- End  -->
+	
+	
+	<!--장바구니에 상품 추가-->
+	<parameterMap type="cartVo" id="parameterCartInsertMap">
+		<parameter property="user_id" mode="IN" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<parameter property="pcode" mode="IN" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<parameter property="product_count" mode="IN" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		
+		</parameterMap>
+	<insert id="insert" statementType="CALLABLE" parameterMap="parameterCartInsertMap">
+		{  call sp_cart_insert(?,?,?)}
+	</insert>
+	<!-- End  -->
+	
+	<!--  cart에 기존상품있을시 + 추가-->
+	<parameterMap type="cartVo" id="parameterCartUpdateMap">
+	<parameter property="user_id" mode="IN" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<parameter property="pcode" mode="IN" javaType="java.lang.String" jdbcType="INTEGER"/>
+		<parameter property="product_count" mode="IN" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		
+		</parameterMap>
+	<update id="update" statementType="CALLABLE" parameterMap="parameterCartUpdateMap">
+		{  call sp_cart_update(?,?,?)}
+	</update>
+	<!-- End  -->
+	
+	<!--장바구니 기존상품 확인  -->
+	<select id="updatecheck" parameterType="String" resultType="Integer" >
+		SELECT COUNT(1) as cnt
+		FROM CART 
+  		WHERE user_id = #{user_id} AND pcode = #{pcode}
+	</select>
+	<!-- End  -->
+	
+	<!--장바구니비우기-->
+	<parameterMap type="hashMap" id="parameterCartAllDelMap">
+		<parameter property="user_id" mode="IN" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		</parameterMap>
+	<delete id="allDelete" statementType="CALLABLE" parameterMap="parameterCartAllDelMap">
+		{  call sp_cart_alldel(?)}
+	</delete>
+	<!-- End  -->
+	
+	<!--선택된user_id 카트리스트에 배송비를 제외한 물품 총합계   -->
+	<select id="productSum" resultType="Integer" parameterType="String">
+		SELECT NVL(SUM(b.price * a.product_count), 0) money
+		FROM CART a
+		INNER
+		JOIN PRODUCT b
+		ON a.pcode = b.pcode
+		WHERE
+		a.pcode = b.pcode AND a.user_id=#{user_id}
+	</select>
+	
+	<!-- 장바구니 수량변경 클릭시-->
+	<parameterMap type="cartVo" id="CartModifyMap">
+	<parameter property="product_count" mode="IN" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<parameter property="user_id" mode="IN" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<parameter property="pcode" mode="IN" javaType="java.lang.String" jdbcType="VARCHAR"/>
+	</parameterMap>
+	<update id="cartModify" statementType="CALLABLE" parameterMap="CartModifyMap" parameterType="hashMap">
+		{  call sp_cart_modify(?,?,?)}
+	</update>
+	<!-- End  -->
+	
+	<!--상품 개별 삭제-->
+	<parameterMap type="hashMap" id="CartSelectDelMap">
+	<parameter property="cart_idx" mode="IN" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		
+		</parameterMap>
+	<delete id="selectDelete" statementType="CALLABLE" parameterMap="CartSelectDelMap">
+		{  call sp_cart_selectdel(?)}
+	</delete>
+	<!-- End  -->
+	
+	
+	
+	
+	
+</mapper>

@@ -1,0 +1,34 @@
+  #btnregister{
+      width : 444px; height : 49px;
+      text-align:center;
+   }
+   
+   #title {
+      text-align : center;
+   }
+
+   #signupform {
+      text-align : left;
+   }
+   
+   span{
+      color:grey;
+      font-size: small;
+   }
+   
+   #repuire{
+      text-align:right;
+   }
+   
+   .control-label{
+      font-size:15px;
+   }
+   
+   .txt_checkbox{
+      font-size:13px;
+   }
+   
+   #confirm, #confirm1{
+      height : 30px
+   }
+   

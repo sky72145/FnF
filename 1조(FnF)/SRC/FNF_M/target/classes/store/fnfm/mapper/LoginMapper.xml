@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="store.fnfm.mapper.LoginMapper">
+	<resultMap type="loginVo" id="LoginMap">
+		<id property="user_id" column="user_id"/>
+		<result column="password" property="password"/>
+		<result property="user_name" column="user_name"/>
+		<result property="email" column="email"/>
+		<result property="birth" column="birth"/>
+		<result property="question" column="question"/>
+		<result property="answer" column="answer"/>
+		<result property="autority" column="authority"/>
+		<collection property="authList" ofType="authVO">
+			<id property="authority" column="authority"/>
+		</collection>
+	</resultMap>
+	
+<!--  	<resultMap type="store.fnfm.vo.AuthVO" id="authMap">
+		<result property="user_id" column="user_id"/>
+		<result property="authority" column="authority"/>
+	</resultMap>
+	 -->
+
+	<select id="read" parameterType="string" resultMap="LoginMap">
+		SELECT user_id, password, enabled, authority FROM Customer WHERE user_id = #{user_id}
+	</select>
+	
+	<select id="selectUser" parameterType="loginVo" resultType="loginVo">
+	   SELECT USER_NAME, USER_ID, BIRTH, ANSWER, QUESTION FROM Customer 
+	   WHERE USER_ID = #{user_id} 
+	</select>
+	
+	<select id="selectUser2" parameterType="String" resultType="loginVo">
+		SELECT USER_ID, EMAIL, ANSWER, QUESTION FROM Customer WHERE USER_ID = #{user_id}
+	</select>
+	
+	<select id="searchId" parameterType="loginVo" resultType="loginVo">
+	   SELECT USER_ID FROM Customer WHERE user_name = #{user_name} AND email = #{email} AND BIRTH = #{birth}
+	</select>
+	
+	<update id="updatepw" parameterType="loginVo">
+		UPDATE Customer SET password = #{password} WHERE user_id = #{user_id} AND email = #{email}
+	</update>
+</mapper>

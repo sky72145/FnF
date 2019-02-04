@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		
+<mapper namespace="Qaa">
+	<resultMap type="qaaVo" id="selectResultMap">
+      <result column="idx" property="idx" jdbcType="INTEGER" javaType="Integer" />
+      <result column="readnum" property="readnum" jdbcType="SMALLINT" javaType="Integer" />
+      <result column="grp" property="grp" jdbcType="INTEGER" javaType="Integer" />
+      <result column="lev" property="lev" jdbcType="TINYINT" javaType="Integer" />
+      <result column="step" property="step" jdbcType="TINYINT" javaType="Integer" />
+      <result column="user_id" property="user_id" jdbcType="VARCHAR" javaType="String" />
+      <result column="password" property="password" jdbcType="VARCHAR" javaType="String" />
+      <result column="title" property="title" jdbcType="VARCHAR" javaType="String" />
+      <result column="contents" property="contents" jdbcType="VARCHAR" javaType="String" />
+      <result column="writedate" property="writedate" jdbcType="DATE" javaType="String" />
+      <result column="filename" property="filename" jdbcType="VARCHAR" javaType="String" />
+      <result column="status" property="status" jdbcType="VARCHAR" javaType="String" />
+      <result column="reply_status" property="reply_status" jdbcType="INTEGER" javaType="Integer" />
+   </resultMap>
+	
+	<!-- list -->
+	 <parameterMap type="hashMap" id="selectAllMap">
+		<parameter property="results" javaType="ResultSet" jdbcType="CURSOR" mode="OUT"  resultMap="selectResultMap"/>
+		<parameter property="start" jdbcType="INTEGER" javaType="Integer" mode="IN"/>
+		<parameter property="end"  jdbcType="INTEGER" javaType="Integer" mode="IN"/>
+	</parameterMap>
+	<select id="selectAllSP" parameterMap="selectAllMap" statementType="CALLABLE">
+		{  call sp_qaa_select_all(?, ?, ?)}
+	</select>
+
+	<!-- View -->
+	<parameterMap type="qaaVo" id="selectOneMap">
+		<parameter property="idx" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+		<parameter property="result" javaType="ResultSet" jdbcType="CURSOR" mode="OUT"  resultMap="selectResultMap"/>
+	</parameterMap>
+	<select id="selectOneSP" parameterMap="selectOneMap" statementType="CALLABLE"
+		parameterType="hashMap">
+		{  call sp_qaa_select_one(?,?)}
+	</select>
+	
+	<!-- 리스트 페이징 -->
+	<parameterMap type="hashMap" id="selectCountMap">
+		<parameter property="result" javaType="Integer" jdbcType="INTEGER" mode="OUT"/>
+	</parameterMap>
+	<select id="selectTotalCountSP" parameterMap="selectCountMap" statementType="CALLABLE">
+		{  call sp_qaa_total_count(?) }
+	</select>
+
+	<!-- 글쓰기 -->
+	<parameterMap type="qaaVo" id="insertMap">
+      <parameter property="user_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+      <parameter property="password" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+      <parameter property="title" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+      <parameter property="contents" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+      <parameter property="filename" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+      <parameter property="status" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+    </parameterMap>
+    <insert id="insertSP" parameterType="qaaVo" parameterMap="insertMap">
+      {  call sp_qaa_insert(?,?,?,?,?,?)}
+    </insert>
+    
+    <!-- 글수정 -->
+    <parameterMap type="qaaVo" id="updateMap">
+      <parameter property="user_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+      <parameter property="title" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+      <parameter property="contents" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+      <parameter property="idx" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	  <parameter property="filename" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+      <parameter property="password" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+      <parameter property="status" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+    </parameterMap>
+	<update id="updateSP" parameterType="qaaVo" parameterMap="updateMap">
+		{  call sp_qaa_update(?,?,?,?,?,?,?)}
+	</update>
+	
+	<!-- 삭제하기 -->
+	<parameterMap type="Integer" id="deleteMap">
+		<parameter property="idx" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	</parameterMap>
+	<delete id="deleteSP" parameterMap="deleteMap">
+		{  call sp_qaa_delete(?)}
+	</delete>
+	
+	<!-- 조회수 -->
+	<update id="readnumCountU" parameterType="Integer">
+		UPDATE Qaa SET readnum = readnum + 1 WHERE idx = #{idx}
+	</update>
+	
+	<!-- 검색하기 -->
+	<parameterMap type="qaaVo" id="searchAllMap">
+		<parameter property="user_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="title" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="contents" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="results" javaType="ResultSet" jdbcType="CURSOR" mode="OUT"  resultMap="selectResultMap"/>
+		<parameter property="start" jdbcType="INTEGER" javaType="Integer" mode="IN"/>
+		<parameter property="end"  jdbcType="INTEGER" javaType="Integer" mode="IN"/>
+	</parameterMap>
+	<select id="searchAll" parameterMap="searchAllMap" statementType="CALLABLE">
+		{  call Qaa_SEARCH(?, ?, ?, ?, ?, ?)}
+	</select>
+	
+	<!-- 검색 페이징 -->
+	<parameterMap type="hashMap" id="searchCountMap">
+		<parameter property="user_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="title" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="contents" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="result" javaType="Integer" jdbcType="INTEGER" mode="OUT"/>
+	</parameterMap>
+	<select id="searchCount" parameterMap="searchCountMap" statementType="CALLABLE">
+		{  call Qaa_SEARCH_TOTAL(?, ?, ?, ?) }
+	</select>
+</mapper>

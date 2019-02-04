@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Product">
+	<resultMap type="productVo" id="selectResultMap">
+		<result column="idx" property="idx" javaType="Integer" jdbcType="INTEGER"/>
+		<result column="sellerid" property="sellerid" javaType="String" jdbcType="VARCHAR"/>
+		<result column="pcode" property="pcode" javaType="String" jdbcType="VARCHAR"/>
+		<result column="pname" property="pname" javaType="String" jdbcType="VARCHAR"/>
+		<result column="pcontents" property="pcontents" javaType="String" jdbcType="VARCHAR"/>
+		<result column="origin" property="origin" javaType="String" jdbcType="VARCHAR"/>
+		<result column="unit" property="unit" javaType="String" jdbcType="VARCHAR"/>
+		<result column="filename" property="filename" javaType="String" jdbcType="VARCHAR"/>
+		<result column="category" property="category" javaType="String" jdbcType="VARCHAR"/>
+		<result column="stock" property="stock" javaType="Integer" jdbcType="INTEGER"/>
+		<result column="price" property="price" javaType="Integer" jdbcType="INTEGER"/>
+		<result column="sell_num" property="sell_num" javaType="Integer" jdbcType="INTEGER"/>
+		<result column="recomm" property="recomm" javaType="Integer" jdbcType="INTEGER"/>
+		<result column="writedate" property="writedate" javaType="String" jdbcType="DATE" />
+		<result column="category2" property="category2" javaType="String" jdbcType="VARCHAR"/>
+	</resultMap>
+	
+	<parameterMap type="hashMap" id="selectAllMap">
+		<parameter property="results" javaType="ResultSet" jdbcType="CURSOR" mode="OUT"  resultMap="selectResultMap"/>
+		<parameter property="start" jdbcType="INTEGER" javaType="Integer" mode="IN"/>
+		<parameter property="end"  jdbcType="INTEGER" javaType="Integer" mode="IN"/>
+	</parameterMap>
+	<select id="selectAllSP" parameterMap="selectAllMap" statementType="CALLABLE">
+		{  call sp_product_select_all(?,?,?)}
+	</select>
+	
+	<parameterMap type="hashMap" id="selectCountMap">
+		<parameter property="result" javaType="Integer" jdbcType="INTEGER" mode="OUT"/>
+	</parameterMap>
+	<select id="selectTotalCountSP" parameterMap="selectCountMap" statementType="CALLABLE">
+		{  call sp_product_total_count(?) }
+	</select>
+	
+	
+	<parameterMap type="hashMap" id="recommMap">
+		<parameter property="results" javaType="ResultSet" jdbcType="CURSOR" mode="OUT"  resultMap="selectResultMap"/>
+		<parameter property="start" jdbcType="INTEGER" javaType="Integer" mode="IN"/>
+		<parameter property="end"  jdbcType="INTEGER" javaType="Integer" mode="IN"/>
+	</parameterMap>
+	<select id="selectRecommSP" parameterMap="recommMap" statementType="CALLABLE">
+		{  call sp_product_select_recomm(?,?,?)}
+	</select>
+	
+	
+	<parameterMap type="hashMap" id="recomm1Map">
+		<parameter property="results" javaType="ResultSet" jdbcType="CURSOR" mode="OUT"  resultMap="selectResultMap"/>
+	</parameterMap>
+	<select id="selectRecomm1SP" parameterMap="recomm1Map" statementType="CALLABLE">
+		{  call sp_product_select_recomm1(?)}
+	</select>
+	
+	
+	<parameterMap type="hashMap" id="selectRecommCountMap">
+		<parameter property="result" javaType="Integer" jdbcType="INTEGER" mode="OUT"/>
+	</parameterMap>
+	<select id="selectRecommTotalCountSP" parameterMap="selectRecommCountMap" statementType="CALLABLE">
+		{  call sp_product_recomm_total_count(?) }
+	</select>
+	
+	<update id="updateRecommSP" parameterType="productVo">
+		{  call sp_product_update_recomm(#{pcode})}
+	</update>
+	
+	<update id="updateRecomm1SP" parameterType="productVo">
+		{  call sp_product_update_recomm1(#{pcode})}
+	</update>
+	
+	
+	
+	<parameterMap type="String" id="deleteMap">
+		<parameter property="pcode" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	</parameterMap>
+	<delete id="deleteSP" parameterMap="deleteMap">
+		{  call sp_product_delete(?)}
+	</delete>
+	
+	
+	
+	<parameterMap type="hashMap" id="searchCountMap">
+		<parameter property="sellerid" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="pcode" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="pname" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="origin" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="category" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="category2" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="result" javaType="Integer" jdbcType="INTEGER" mode="OUT" resultMap="selectResultMap"/>
+	</parameterMap>
+	<select id="searchTotalCountSP" parameterMap="searchCountMap" statementType="CALLABLE" parameterType="hashMap">
+		{ call sp_product_search_total_count(?,?,?,?,?,?,?)}
+	</select>
+	
+	
+	<parameterMap type="productVo" id="searchAllMap">
+		<parameter property="sellerid" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="pcode" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="pname" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="origin" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="category" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="category2" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="results" javaType="ResultSet" jdbcType="CURSOR" mode="OUT" resultMap="selectResultMap"/>
+		<parameter property="start" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+		<parameter property="end" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	</parameterMap>
+	<select id="searchSP" parameterMap="searchAllMap" parameterType="hashMap" statementType="CALLABLE">
+		{ call sp_product_search(?,?,?,?,?,?,?,?,?)}
+	</select>
+</mapper>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		
+<mapper namespace="search">
+
+	<select id="searchAll" parameterType="String" resultType="store.fnfm.vo.ProductVO">
+		SELECT pname, filename, price
+		FROM product
+		WHERE sellerid like CONCAT('%',(CONCAT(#{keyword},'%')))
+		OR pname like CONCAT('%',(CONCAT(#{keyword},'%')))
+		<!-- <include refid="search"></include> -->
+		ORDER BY idx DESC
+	</select>
+	
+	<select id="searchAllCount" parameterType="String" resultType="int">
+		SELECT COUNT(*)
+		FROM product
+		WHERE sellerid like CONCAT('%',(CONCAT(#{keyword},'%')))
+		OR pname like CONCAT('%',(CONCAT(#{keyword},'%')))
+		<!-- <include refid="search"></include> -->
+		
+	</select>
+	
+<!-- 	<sql id="search">
+		WHERE 
+		(
+		sellerid like CONCAT('%',(CONCAT(#{keyword},'%')))
+		OR pname like CONCAT('%',(CONCAT(#{keyword},'%')))
+		)
+	</sql> -->
+	
+</mapper>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="store.fnfm.mapper.ProductsMapper">
+	<select id="products" resultType="store.fnfm.vo.ProductsVO">
+		select * from product where
+		category = #{category} order by writedate desc
+	</select>
+	<select id="products2" resultType="store.fnfm.vo.ProductsVO">
+		select * from product where
+		category2 = #{category2} order by writedate desc
+	</select>
+	<select id="productc" resultType="store.fnfm.vo.ProductsVO">
+		select * from product where
+		recomm = 1 order by writedate desc
+	</select>
+	<select id="productc2" resultType="store.fnfm.vo.ProductsVO">
+		select * from product where
+		recomm = 1 and category = #{category} order by writedate desc
+	</select>
+	<select id="productf" resultType="store.fnfm.vo.ProductsVO">
+		select * from product order by
+		sell_num desc 
+	</select>
+	<select id="productf2" resultType="store.fnfm.vo.ProductsVO">
+		select * from product where
+		category = #{category} order by
+		sell_num desc
+	</select>
+	<select id="productsWithPaging"
+		resultType="store.fnfm.vo.ProductsVO">
+		<![CDATA[
+			select idx, sellerid, pcode, pname, pcontents, origin, unit, filename, category, stock, price, sell_num, recomm, writedate, category2 
+			from (
+			select rownum rn, idx, sellerid, pcode, pname, pcontents, origin, unit, filename, category, stock, price, sell_num, recomm, writedate, category2
+			from
+			product
+			where 
+			rownum <= #{pageNum} * #{amount} and category=#{category} 
+			)
+			where rn > (#{pageNum} -1) * #{amount} order by writedate desc
+		]]>
+	</select>
+	<select id="productcWithPaging"
+		resultType="store.fnfm.vo.ProductsVO">
+		<![CDATA[
+			select idx, sellerid, pcode, pname, pcontents, origin, unit, filename, category, stock, price, sell_num, recomm, writedate, category2 
+			from (
+			select rownum rn, idx, sellerid, pcode, pname, pcontents, origin, unit, filename, category, stock, price, sell_num, recomm, writedate, category2
+			from
+			product
+			where rownum <= #{pageNum} * #{amount} and recomm = 1 
+			)
+			where rn > (#{pageNum} -1) * #{amount} order by writedate desc
+		]]>
+	</select>
+	<select id="productfWithPaging"
+		resultType="store.fnfm.vo.ProductsVO">
+		<![CDATA[
+			select idx, sellerid, pcode, pname, pcontents, origin, unit, filename, category, stock, price, sell_num, recomm, writedate, category2 
+			from (
+			select rownum rn, idx, sellerid, pcode, pname, pcontents, origin, unit, filename, category, stock, price, sell_num, recomm, writedate, category2
+			from
+			product
+			where rownum <= #{pageNum} * #{amount} order by
+		    sell_num desc 
+			)
+			 where rn > (#{pageNum} -1) * #{amount} 
+		]]>
+	</select>
+	<select id="products2WithPaging"
+		resultType="store.fnfm.vo.ProductsVO">
+		<![CDATA[
+			select idx, sellerid, pcode, pname, pcontents, origin, unit, filename, category, stock, price, sell_num, recomm, writedate, category2 
+			from (
+			select rownum rn, idx, sellerid, pcode, pname, pcontents, origin, unit, filename, category, stock, price, sell_num, recomm, writedate, category2
+			from
+			product
+			where rownum <= #{pageNum} * #{amount} and category2=#{category2} 
+			)
+			where rn > (#{pageNum} -1) * #{amount} order by writedate desc
+		]]>
+	</select>
+	<select id="productc2WithPaging"
+		resultType="store.fnfm.vo.ProductsVO">
+		<![CDATA[
+			select idx, sellerid, pcode, pname, pcontents, origin, unit, filename, category, stock, price, sell_num, recomm, writedate, category2 
+			from (
+			select rownum rn, idx, sellerid, pcode, pname, pcontents, origin, unit, filename, category, stock, price, sell_num, recomm, writedate, category2
+			from
+			product
+			where rownum <= #{pageNum} * #{amount} and recomm = 1 and category = #{category} 
+			)
+			where rn > (#{pageNum} -1) * #{amount} order by writedate desc
+		]]>
+	</select>
+	<select id="productf2WithPaging"
+		resultType="store.fnfm.vo.ProductsVO">
+		<![CDATA[
+			select idx, sellerid, pcode, pname, pcontents, origin, unit, filename, category, stock, price, sell_num, recomm, writedate, category2 
+			from (
+			select rownum rn, idx, sellerid, pcode, pname, pcontents, origin, unit, filename, category, stock, price, sell_num, recomm, writedate, category2
+			from
+			product
+			where rownum <= #{pageNum} * #{amount} and category = #{category} order by
+		     sell_num desc 
+			)
+			where rn > (#{pageNum} -1) * #{amount} 
+		]]>
+	</select>
+	<select id="getTotalCount" resultType="int">
+		select count(*) from
+		product where category = #{category} order by writedate desc
+	</select>
+	<select id="getTotalCount2" resultType="int">
+		select count(*) from
+		product where category2 = #{category2} order by writedate desc
+	</select>
+	<select id="getTotalCount3" resultType="int">
+		select count(*) from
+		product order by writedate desc
+	</select>
+	<select id="getTotalCount4" resultType="int">
+		select count(*) from
+		product where recomm = 1 order by writedate desc
+	</select>
+	<select id="getTotalCount5" resultType="int">
+		select count(*) from
+		product where
+		recomm = 1 and category = #{category} order by writedate desc
+	</select>
+</mapper>

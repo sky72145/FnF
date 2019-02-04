@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		
+<mapper namespace="SellerChart">
+<!-- order_idx는 number 시퀀스-->
+<!-- idx는 String 주문번호 -->
+	<resultMap type="SellerChartVO" id="SellerChartResultMap">
+		<result column="IDX" property="idx" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="order_IDX" property="order_idx" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="totalprice" property="totalprice" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="SUM(s.totalprice)" property="totalprice" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="PRODUCT_COUNT" property="product_count" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="PCODE" property="pcode" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="USER_ID" property="user_id" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="RECEIVER_NAME" property="receiver_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="PAY" property="pay" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="PAY_DATE" property="pay_date" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="ZIPCODE" property="zipcode" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="ADDRESS1" property="address1" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="ADDRESS2" property="address2" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="MILE_GIVE" property="mile_give" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="MILE_USED" property="mile_used" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="DEL_name" property="del_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="DEL_MESSAGE" property="del_message" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="DEL_PRICE" property="del_price" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="DEL_CODE" property="del_code" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="STATUS" property="status" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="order_status" property="order_status" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="USER_NAME" property="user_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="EMAIL" property="email" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="PHONE" property="phone" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="MILE_REMAIN" property="mile_remain" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result property="sellerid" column="sellerid" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="pname" column="pname" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="filename" column="filename" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="del_url" column="del_url" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="price" property="price" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result property="stock" column="stock" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result property="sell_num" column="sell_num" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result property="recomm" column="recomm" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result property="origin" column="origin" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="pcontents" column="pcontents" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="unit" column="unit" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="category" column="category" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="category2" column="category2" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="writedate" column="writedate" javaType="String" jdbcType="DATE" />
+	</resultMap>
+	
+	<!-- alias SellerChartVO -->
+<!-- ========================================상품별판매수selectOne======================================== -->
+<parameterMap type="SellerChartVO" id="SellerChartResultMap">
+	<parameter property="sellerid" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="result" javaType="ResultSet" jdbcType="CURSOR" mode="OUT" resultMap="SellerChartResultMap"/>	
+</parameterMap>
+<select id="ChartSelectOne" parameterMap="SellerChartResultMap" parameterType="hashMap" statementType="CALLABLE">
+{ call PRODUCT_SELLER_CHART(?,?)}
+</select>
+<!-- ==========================================OUTparameter있으면 statementType 적어야함====================================== -->
+
+<!-- ========================================무통장,카카오 결제 건 수======================================== -->
+<parameterMap type="hashMap" id="payCountResultMap">
+	<parameter property="sellerid" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="pay" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="result" javaType="Integer" jdbcType="INTEGER" mode="OUT"/>	
+</parameterMap>
+<select id="paycount" parameterMap="payCountResultMap" parameterType="hashMap" statementType="CALLABLE">
+{ call PRODUCT_SELLER_PAYCOUNT(?,?,?)}
+</select>
+<!-- ================================================================================ -->
+
+<!-- ========================================상품별매출액selectOne======================================== -->
+<parameterMap type="SellerChartVO" id="SellerPriceChartResultMap">
+	<parameter property="sellerid" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="result" javaType="ResultSet" jdbcType="CURSOR" mode="OUT" resultMap="SellerChartResultMap"/>	
+</parameterMap>
+<select id="PriceChartSelectOne" parameterMap="SellerPriceChartResultMap" parameterType="hashMap" statementType="CALLABLE">
+{ call PRODUCT_SELLER_CHARTPRICE(?,?)}
+</select>
+<!-- ==========================================OUTparameter있으면 statementType 적어야함====================================== -->
+
+<!-- ========================================월별 매출액selectList======================================== -->
+<parameterMap type="SellerChartVO" id="MonthSalesChartResultMap">
+	<parameter property="sellerid" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="result" javaType="ResultSet" jdbcType="CURSOR" mode="OUT" resultMap="SellerChartResultMap"/>	
+</parameterMap>
+<select id="MonthSalesChart" parameterMap="MonthSalesChartResultMap" parameterType="hashMap" statementType="CALLABLE">
+{ call PRODUCT_SELLER_MONTHSALES(?,?)}
+</select>
+<!-- ================================================================================ -->
+
+</mapper>

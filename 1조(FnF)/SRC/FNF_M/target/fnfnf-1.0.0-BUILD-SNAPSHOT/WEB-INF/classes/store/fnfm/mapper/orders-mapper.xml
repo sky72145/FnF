@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		
+<mapper namespace="Orders">
+<!-- order_idx는 number 시퀀스-->
+<!-- idx는 String 주문번호 -->
+	<resultMap type="OrdersVO" id="OrdersResultMap">
+		<result column="IDX" property="idx" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="order_IDX" property="order_idx" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="totalprice" property="totalprice" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="PRODUCT_COUNT" property="product_count" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="PCODE" property="pcode" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="USER_ID" property="user_id" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="RECEIVER_NAME" property="receiver_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="PAY" property="pay" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="PAY_DATE" property="pay_date" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="ZIPCODE" property="zipcode" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="ADDRESS1" property="address1" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="ADDRESS2" property="address2" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="MILE_GIVE" property="mile_give" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="MILE_USED" property="mile_used" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="DEL_name" property="del_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="DEL_MESSAGE" property="del_message" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="DEL_PRICE" property="del_price" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="DEL_CODE" property="del_code" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="STATUS" property="status" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="order_status" property="order_status" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="USER_NAME" property="user_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="EMAIL" property="email" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="PHONE" property="phone" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="MILE_REMAIN" property="mile_remain" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result property="sellerid" column="sellerid" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="pname" column="pname" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="filename" column="filename" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="del_url" column="del_url" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="price" property="price" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+	</resultMap>
+	
+	<!-- alias OrdersVO -->
+<!-- ========================================selectAll======================================== -->
+	<parameterMap type="OrdersVO" id="OrdersSelectAllMap">
+		<parameter property="sellerid" javaType="String" jdbcType="VARCHAR" mode="IN" />
+		<parameter property="results" javaType="ResultSet" jdbcType="CURSOR" mode="OUT" resultMap="OrdersResultMap"/>
+		<parameter property="start" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+		<parameter property="end" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	</parameterMap>
+	<select id="ordersSelectAll" parameterMap="OrdersSelectAllMap" parameterType="hashMap" statementType="CALLABLE">
+	{ call ORDERS_SELLER_SELECTALL(?,?,?,?)}
+	</select>
+<!-- ================================================================================ -->
+<!-- ===============================Paging===================================== -->
+<parameterMap type="hashMap" id="OrdersSelectCountMap">
+	<parameter property="sellerid" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="result" javaType="Integer" jdbcType="INTEGER" mode="OUT"/>
+</parameterMap>
+<select id="ordersTotalCount" parameterMap="OrdersSelectCountMap" statementType="CALLABLE" parameterType="hashMap">
+	{ call ORDERS_SELLER_TOTAL_COUNT(?,?)}
+</select>
+<!-- ==================================================================== -->
+
+<!-- ========================================selectOne======================================== -->
+<parameterMap type="OrdersVO" id="OrdersSelectOneMap">
+	<parameter property="idx" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="result" javaType="ResultSet" jdbcType="CURSOR" mode="OUT" resultMap="OrdersResultMap"/>	
+</parameterMap>
+<select id="ordersSelectOne" parameterMap="OrdersSelectOneMap" parameterType="hashMap" statementType="CALLABLE">
+{ call ORDERS_SELLER_SELECTONE(?,?)}
+</select>
+<!-- ==========================================OUTparameter있으면 statementType 적어야함====================================== -->
+
+<!-- ==================================================================== -->
+<!-- ${} 써주면 알아서 boardVO.getIdx() 값을 가져온다 -->
+<update id="updateOrderSeller" parameterType="OrdersVO">
+	{ call ORDERS_SELLER_UPDATE(#{idx},#{receiver_name},#{phone},#{zipcode},#{address1},#{address2},#{del_name},#{del_code},#{del_message})}
+</update>
+<!-- ==================================================================== -->
+
+<!-- ====================송장번호중복체크======================== -->
+<select id="delcodeCheck" parameterType="String" resultType="Integer">
+    SELECT COUNT(*)
+	FROM orders
+	WHERE del_code = #{del_code}
+</select>
+<!-- ============================================ -->
+
+<!-- ===============================sellerOrdersSearchPaging===================================== -->
+<parameterMap type="hashMap" id="OrdersSearchCountMap">
+	<parameter property="sellerid" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="idx" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="user_name" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="receiver_name" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="pname" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="status" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="pay" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="result" javaType="Integer" jdbcType="INTEGER" mode="OUT"/>
+</parameterMap>
+<select id="searchTotalCountSP" parameterMap="OrdersSearchCountMap" statementType="CALLABLE" parameterType="hashMap">
+	{ call ORDERS_SELLER_SCOUNT(?,?,?,?,?,?,?,?)}
+</select>
+<!-- ==================================================================== -->
+
+<!-- ========================================sellerOrdersSearchAll======================================== -->
+	<parameterMap type="OrdersVO" id="OrdersSearchAllMap">
+		<parameter property="sellerid" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="idx" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="user_name" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="receiver_name" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="pname" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="status" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="pay" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="results" javaType="ResultSet" jdbcType="CURSOR" mode="OUT" resultMap="OrdersResultMap"/>
+		<parameter property="start" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+		<parameter property="end" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	</parameterMap>
+	<select id="searchSelectList" parameterMap="OrdersSearchAllMap" parameterType="hashMap" statementType="CALLABLE">
+	{ call ORDERS_SELLER_search(?,?,?,?,?,?,?,?,?,?)}
+	</select>
+<!-- ================================================================================ -->
+
+<!-- ========================================del_URL_selectOne======================================== -->
+<parameterMap type="OrdersVO" id="DelURLSelectOneMap">
+	<parameter property="del_name" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+	<parameter property="result" javaType="ResultSet" jdbcType="CURSOR" mode="OUT" resultMap="OrdersResultMap"/>	
+</parameterMap>
+<select id="DelURLSelectOne" parameterMap="DelURLSelectOneMap" parameterType="hashMap" statementType="CALLABLE">
+{ call ORDERS_SELLER_del_url(?,?)}
+</select>
+<!-- ================================================================================ -->
+
+
+</mapper>

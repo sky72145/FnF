@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="store.fnfm.mapper.MyMessageMapper">																									<!-- alias -->
+<insert id="myInsert">
+		INSERT INTO message(idx,SEND_ID,RECEIVE_ID,title,contents)
+	VALUES (message_idx_seq.NEXTVAL, #{send_id}, #{receive_id}, #{title}, #{contents})
+</insert>
+	<select id="readmsg" resultType="store.fnfm.vo.MyMessageVO">
+		select * from message where idx = #{idx}
+	</select>
+	<select id="deletesed" resultType="store.fnfm.vo.MyMessageVO">
+		UPDATE message SET del_status = 1 WHERE idx = #{idx}
+	</select>
+	<select id="deleterec" resultType="store.fnfm.vo.MyMessageVO">
+		UPDATE message SET del_status2 = 1 WHERE idx = #{idx}
+	</select>
+	<select id="getsendListWithPaging" resultType="store.fnfm.vo.MyMessageVO">
+		select * from message where send_id = #{send_id} and del_status = 0 
+	</select>
+	<select id="getreceiveListWithPaging" resultType="store.fnfm.vo.MyMessageVO">
+		select * from message where receive_id = #{receive_id} and del_status2 = 0
+	</select>
+	<update id="update">
+		UPDATE message SET status = '읽음' WHERE idx = #{idx}
+	</update>
+</mapper>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Board">
+	<resultMap type="boardVo" id="selectResultMap">
+		<result column="board" property="board" javaType="String" jdbcType="VARCHAR"/>
+		<result column="idx" property="idx" javaType="Integer" jdbcType="INTEGER"/>
+		<result column="user_id" property="user_id" javaType="String" jdbcType="VARCHAR"/>
+		<result column="title" property="title" javaType="String" jdbcType="VARCHAR"/>
+		<result column="contents" property="contents" javaType="String" jdbcType="VARCHAR"/>
+		<result column="writedate" property="writedate" javaType="String" jdbcType="DATE"/>
+		<result column="readnum" property="readnum" javaType="Integer" jdbcType="INTEGER"/>
+	</resultMap>
+	
+	
+	<parameterMap type="hashMap" id="selectAllMap">
+		<parameter property="results" javaType="ResultSet" jdbcType="CURSOR" mode="OUT"  resultMap="selectResultMap"/>
+		<parameter property="start" jdbcType="INTEGER" javaType="Integer" mode="IN"/>
+		<parameter property="end"  jdbcType="INTEGER" javaType="Integer" mode="IN"/>
+	</parameterMap>
+	<select id="selectAllSP" parameterMap="selectAllMap" statementType="CALLABLE">
+		{  call sp_board_select_all(?,?,?)}
+	</select>
+	
+	<parameterMap type="hashMap" id="selectCountMap">
+		<parameter property="result" javaType="Integer" jdbcType="INTEGER" mode="OUT"/>
+	</parameterMap>
+	<select id="selectTotalCountSP" parameterMap="selectCountMap" statementType="CALLABLE">
+		{  call sp_board_total_count(?) }
+	</select>
+	
+	
+	<parameterMap type="Integer" id="deleteFaqMap">
+		<parameter property="idx" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	</parameterMap>
+	<delete id="deleteFaqSP" parameterMap="deleteFaqMap">
+		{  call sp_faq_delete(?)}
+	</delete>
+	
+	<parameterMap type="Integer" id="deleteNoticeMap">
+		<parameter property="idx" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	</parameterMap>
+	<delete id="deleteNoticeSP" parameterMap="deleteNoticeMap">
+		{  call sp_notice_delete(?)}
+	</delete>
+	
+	<parameterMap type="Integer" id="deleteQaaMap">
+		<parameter property="idx" javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	</parameterMap>
+	<delete id="deleteQaaSP" parameterMap="deleteQaaMap">
+		{  call sp_qaa_delete(?)}
+	</delete>
+	
+	
+	<parameterMap type="boardVo" id="searchMap">
+		<parameter property="results" javaType="ResultSet" jdbcType="CURSOR" mode="OUT"  resultMap="selectResultMap"/>
+		<parameter property="board" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="user_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="title" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="contents" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="start"  javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+		<parameter property="end"  javaType="Integer" jdbcType="INTEGER" mode="IN"/>
+	</parameterMap>
+	<select id="searchSP" parameterMap="searchMap" statementType="CALLABLE" parameterType="hashMap">
+		{ call sp_board_search(?,?,?,?,?,?,?)}
+	</select>
+	
+	<parameterMap type="hashMap" id="searchCountMap">
+		<parameter property="board" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="user_id" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="title" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="contents" javaType="String" jdbcType="VARCHAR" mode="IN"/>
+		<parameter property="result" javaType="Integer" jdbcType="INTEGER" mode="OUT"/>
+	</parameterMap>
+	<select id="searchTotalCountSP" parameterMap="searchCountMap" statementType="CALLABLE" parameterType="hashMap">
+		{  call sp_board_search_total_count(?,?,?,?,?)}
+	</select>
+</mapper>
